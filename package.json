@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "postinstall": "webpack --mode production --config webpack.config.js && ./node_modules/.bin/babel dist/index.js --out-dir dist",
+    "postinstall": "node install.js && ./node_modules/.bin/babel dist/index.js --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
