@@ -10,3 +10,5 @@ class Hi extends Hello {
     this.hello = 'folks';
   }
 }
+
+module.exports = Hi;
