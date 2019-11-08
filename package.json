@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "postinstall": "node install.js && ./node_modules/.bin/babel dist/index.js --out-dir dist",
+    "postinstall": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
