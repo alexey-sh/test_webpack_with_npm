@@ -21,7 +21,7 @@ webpack(webpackConfig, (err, stats) => {
   }
   else {
     const file = path.join("dist", "index.js");
-    babel.transformFileAsync(, babelConfig).then(result => {
+    babel.transformFileAsync(file, babelConfig).then(result => {
       fs.writeFileSync(file, result.code);
     });
    
