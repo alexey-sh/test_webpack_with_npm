@@ -20,7 +20,7 @@ webpack(webpackConfig, (err, stats) => {
     console.error(info.errors);
   }
   else {
-    const file = path.join("dist", "index.js");
+    const file = path.join(webpackConfig.output.path, webpackConfig.output.filename);
     babel.transformFileAsync(file, babelConfig).then(result => {
       fs.writeFileSync(file, result.code);
     });
