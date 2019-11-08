@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "preinstall": "npm install webpack webpack-cli @babel/core @babel/plugin-proposal-object-rest-spread @babel/plugin-transform-runtime @babel/preset-env babel-loader && echo $PWD",
-    "postinstall": "node install.js",
+    "preinstall": "npm install @babel/core @babel/cli @babel/preset-env @babel/polyfill && echo $PWD",
+    "postinstall": "./node_modules/.bin/babel main.js --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
