@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const babel = require("@babel/core");
 const webpackConfig = require('./webpack.config.js');
@@ -19,9 +20,10 @@ webpack(webpackConfig, (err, stats) => {
     console.error(info.errors);
   }
   else {
-   babel.transformFileAsync(path.join("dist", "index.js"), babelConfig).then(result => {
-     console.log(result.code);
-   });
+    const file = path.join("dist", "index.js");
+    babel.transformFileAsync(, babelConfig).then(result => {
+      fs.writeFileSync(file, result.code);
+    });
    
   }
 
