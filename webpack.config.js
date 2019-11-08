@@ -19,21 +19,9 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader',
                     options: {
-                        "presets": [
-                            [
-                                "@babel/preset-env",
-                                {
-                                    "targets": {
-                                        chrome: '40',
-                                        firefox: '52',
-                                        ie: '11',
-                                        safari: '9'
-                                    }
-                                }
-                            ]
-                        ]
+                        presets: ['@babel/preset-env']
                     }
                 }
             }
