@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "preinstall": "npm install parcel && echo $PWD",
-    "postinstall": "parcel build main.js",
+    "preinstall": "npm install webpack && echo $PWD",
+    "postinstall": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
