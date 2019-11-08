@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "preinstall": "npm install webpack @babel/core @babel/cli @babel/preset-env @babel/polyfill && echo $PWD",
-    "postinstall": "node install.js && ./node_modules/.bin/babel dist/index.js --out-dir dist --plugins=@babel/plugin-transform-arrow-functions --presets=@babel/env",
+    "postinstall": "node install.js && ./node_modules/.bin/babel dist/index.js --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
