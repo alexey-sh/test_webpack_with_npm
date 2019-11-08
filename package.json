@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "preinstall": "npm install webpack && echo $PWD",
+    "preinstall": "npm install webpack webpack-cli @babel/core @babel/plugin-proposal-object-rest-spread @babel/plugin-transform-runtime @babel/preset-env babel-loader && echo $PWD",
     "postinstall": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
