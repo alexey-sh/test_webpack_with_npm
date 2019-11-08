@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "preinstall": "npm install webpack webpack-cli && echo $PWD",
-    "postinstall": "node ./node_modules/webpack/bin/webpack.js  --mode production --config webpack.config.js",
+    "postinstall": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
