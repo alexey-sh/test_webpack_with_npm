@@ -1,6 +1,6 @@
 const presets = [
   [
-    "@babel/env",
+    "es2015",
     {
       targets: {
         edge: "17",
