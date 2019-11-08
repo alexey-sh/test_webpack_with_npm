@@ -1,7 +1,8 @@
 const webpack = require('webpack');
+const babel = require("@babel/core");
 const config = require('./webpack.config.js');
-console.dir(config);
- webpack(config, (err, stats) => {
+
+webpack(config, (err, stats) => {
   if (err) {
     console.error(err.stack || err);
     if (err.details) {
@@ -14,6 +15,12 @@ console.dir(config);
 
   if (stats.hasErrors()) {
     console.error(info.errors);
+  }
+  else {
+   babel.transformFileAsync("filename.js", options).then(result => {
+     console.log(result.code);
+   });
+   
   }
 
   if (stats.hasWarnings()) {
