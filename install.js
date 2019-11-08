@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const babel = require("@babel/core");
 const webpackConfig = require('./webpack.config.js');
@@ -18,7 +19,7 @@ webpack(webpackConfig, (err, stats) => {
     console.error(info.errors);
   }
   else {
-   babel.transformFileAsync("filename.js", babelConfig).then(result => {
+   babel.transformFileAsync(path.join("dist", "index.js"), babelConfig).then(result => {
      console.log(result.code);
    });
    
