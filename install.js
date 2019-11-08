@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 const config = require('./webpack.config.js');
 console.dir(config);
-setTimeout(function () {
-  webpack(config, (err, stats) => {
+ webpack(config, (err, stats) => {
   if (err) {
     console.error(err.stack || err);
     if (err.details) {
@@ -21,6 +20,3 @@ setTimeout(function () {
     console.warn(info.warnings);
   }
 });
-
-  
-}, 60000)
